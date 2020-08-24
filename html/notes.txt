@@ -16,3 +16,5 @@ div class="article-img" style="background:url(url) to fit image
 positioning - relative(default)
 positioning - fixed (use position to remove spaces)
                 use margin top to shift content down.
+
+transition: box-shadow 0.5s;

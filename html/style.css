@@ -11,9 +11,8 @@ body{
 body h1{
     margin: 0px; 
     margin: 50px 0px;
+    padding: 20px;
 }
-
-
 
 #main-header{
     border-bottom: 1px solid black;
@@ -21,6 +20,18 @@ body h1{
     width: 100%;
     background: rgba(255, 209, 209,0.9);
     top: 0px;
+}
+
+#main-header::before{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 20px;
+    background: rgb(204, 62, 62);
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    z-index: -1;
 }
 
 a{
@@ -43,9 +54,16 @@ h1{
     
 }
 article{
-    max-width: 28%;
+    max-width: 31%;
     display: inline-block;
     padding: 10px;
+    transition: box-shadow 0.5s, background 0.5s;
+
+}
+
+article:hover{
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.7) ;
+    background: rgb(212, 151, 151);
 }
 
 .article-img{
@@ -54,6 +72,7 @@ article{
     background-size: cover !important;
     background-position: center !important;
 }
+
 
 .myInput{
     display: block;
@@ -71,4 +90,14 @@ article{
 
 article:active{
     opacity: 0.5;
+}
+
+.paragraph{
+    max-width: 99%;
+    margin: auto;
+    height: 600px;
+    max-height: 270px; 
+    overflow: scroll;
+    border: 2px solid black;
+    overflow-x: hidden;
 }
