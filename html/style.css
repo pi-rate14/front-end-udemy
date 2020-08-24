@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+body{
+    font-family: 'montserrat light',sans-serif;
+    margin: 0px;
+    margin-top: 60px;
+}
+
+
+
+body h1{
+    margin: 0px; 
+    margin: 50px 0px;
+}
+
+
+
+#main-header{
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 209, 209,0.9);
+    top: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    color: blue;
+}
+
+h1{
+    display: inline;
+}
+#site-title{
+    font-family: 'russo one',sans-serif;
+}
+#top-stories{
+    width: 1000px;
+    margin: auto;
+    
+}
+article{
+    max-width: 28%;
+    display: inline-block;
+    padding: 10px;
+}
+
+.article-img{
+    height: 200px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.myInput{
+    display: block;
+    width: 75%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 3px;
+    border: 0.5px solid grey;
+}
+
+.myInput:focus{
+    background: rgb(247, 247, 247);
+    outline: none;
+}
+
+article:active{
+    opacity: 0.5;
+}

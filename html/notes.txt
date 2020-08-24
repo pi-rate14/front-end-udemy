@@ -1,0 +1,18 @@
+block elements - div (take full width of the parent container)
+inline elements - span (only take required width)
+
+in chrome: room-blue, margin-orange, padding-green
+
+import fonts from google fonts, 
+font-family: 'montserrat light',sans-serif;
+second font loads if first one doesn't
+
+border: size style color;
+
+margin: top-bottom left-right;
+
+div class="article-img" style="background:url(url) to fit image
+
+positioning - relative(default)
+positioning - fixed (use position to remove spaces)
+                use margin top to shift content down.
