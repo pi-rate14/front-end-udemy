@@ -18,3 +18,20 @@ positioning - fixed (use position to remove spaces)
                 use margin top to shift content down.
 
 transition: box-shadow 0.5s;
+
+var btn = document.getElementById("goBtn");
+function buttonClick(){
+    alert("button clicked");
+    btn.removeEventListener("click",buttonClick);
+}
+btn.addEventListener("click",buttonClick); //this only fires the button once.
+
+<arrayname>.forEach();  (loops through the array)
+
+<arrayname>.pop(); (pops the last element out)
+
+<arrayname>.push(<item>); (pushes item in at the last.)
+
+<arrayname>.shift(); (removes the first element)
+
+<arrayname>.unshift(); (adds item in the start)
