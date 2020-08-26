@@ -95,9 +95,6 @@ article:active{
 .paragraph{
     max-width: 99%;
     margin: auto;
-    height: 600px;
-    max-height: 270px; 
-    overflow: scroll;
-    border: 2px solid black;
-    overflow-x: hidden;
+    height: 600px; 
+    
 }

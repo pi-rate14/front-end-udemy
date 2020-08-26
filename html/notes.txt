@@ -35,3 +35,9 @@ btn.addEventListener("click",buttonClick); //this only fires the button once.
 <arrayname>.shift(); (removes the first element)
 
 <arrayname>.unshift(); (adds item in the start)
+
+<arrayname>.splice(<index>,<n>)     (removes n items after the index in the list)
+
+<arrayname>.sort(function(a,b){
+    return a-b;
+})      (sorts number arrray, withput the parameter function, it will sort alphabetically)
