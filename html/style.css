@@ -140,3 +140,36 @@ article:active{
 .submenu a:hover{
     background: #eee;
 } 
+
+.txtarea{
+    display: block;
+    max-width: 80%;
+    margin: 10px auto;
+    resize: none;
+    padding: 10px;
+    border-radius: 3px;
+    border: 0.5px solid grey;
+}
+
+.txtarea:focus{
+    background: rgb(247, 247, 247);
+    outline: none;
+}
+
+.editButtons{
+    width: 22%;
+    margin: 20px auto;
+}
+
+#append, #prepend, #replace{
+    padding:5px 10px;
+    background: #fff;
+    border: solid 0.5px #ccc;
+}
+
+#append:hover, #prepend:hover, #replace:hover{
+    background: #eee;
+}
+#append:focus, #prepend:focus, #replace:focus{
+    border: none;
+}
