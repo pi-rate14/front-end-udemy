@@ -1,4 +1,21 @@
 $(document).ready(function(){ //put dollar sign to convert target(document) to a jquery object. whatver is written in ready function will run when the document is ready.
+    
+    $(document).on('mousedown',function(event){
+        event.preventDefault();
+        switch(event.which){
+            case 1:
+                console.log("left mouse button");
+                break;
+            case 2:
+                console.log("middle mouse button");
+                break;
+            case 3:
+                console.log("right mouse button");
+                break;
+        }
+    })
+    
+    
     $("#txt").html("text changed by jquery"); //$(".id or #class").html("new text");
     $(".btnInput").val("new input value");
     var el = document.getElementById("txt");
@@ -29,11 +46,12 @@ $(document).ready(function(){ //put dollar sign to convert target(document) to a
             $(".paragraph").append(content);
         }
         else if(action=='replace'){
-            $(".paragraph").html(content);
+            if(content!=""){
+                $(".paragraph").html(content);
+            }
         }
         $(".txtarea").val("");
     });
-
 
 
 
