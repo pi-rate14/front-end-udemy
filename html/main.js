@@ -1,62 +1,30 @@
-var btn = document.getElementById("goBtn");
-function buttonClick(){
-    console.log("button clicked");
-    document.getElementById("txt").innerHTML = 
-    "Hello " + document.getElementsByClassName("btnInput")[0].value;
+$(document).ready(function(){ //put dollar sign to convert target(document) to a jquery object. whatver is written in ready function will run when the document is ready.
+    $("#txt").html("text changed by jquery"); //$(".id or #class").html("new text");
+    $(".btnInput").val("new input value");
+    var el = document.getElementById("txt");
+    console.log("EL in vanilla JS:",el);
+    console.log("EL in j query",$(el));
+    $("#goBtn").on("click",function(){ //.on('action'),function
+        alert("nice job!");3
+    });
+    $('[data-trigger="dropdown"]').on('mouseenter',function(){ //event trigger
+        var submenu = $(this).parent().find('.submenu'); //submenu variable finds the class submenu in the parent of 'this' trigger (dropdown).
+        submenu.addClass('active'); //adds the class of active to submenu variable which contains the submenu class.   
+        
+        $('.profileMenu').on('mouseleave',function(){
+            submenu.removeClass('active');
+        });
+    
+    });
+   
 
-}
 
-var hobbies = ["pizza","gaming","music"];
-console.log(hobbies.pop());
-console.log(hobbies);
-hobbies.forEach(function(item,index){
-    console.log("I like", item);
-})
-btn.addEventListener("click",buttonClick);
 
-function getPhrase(params)
-{
-    var l = 0;
-    if(typeof params.phrase !== "undefined")
-    {
-        l = params.phrase.length;
-    }
-    if (typeof params.another !== "undefined")
-    {
-        l+=params.another.length;
-    }
-    return l;
-}
 
-var p1 = "My name is";
-var p2 = "Apoorva Srivastava";
 
-var computed = getPhrase({phrase:p1, another:p2});
-console.log(computed);
 
-array = [12,24,27,9,15,3,18];
-function sortArray(array){
-    var l = array.length;
-    for(var i=0;i<l;i++)
-    {
-        for(var j=0;j<l-1;j++)
-        {
-            if(array[j]>array[j+1])
-            {
-                var temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-            }
-        }
-    }
-    return array;
-}
-function findMissing(array){
-    var l = array.length;
-    for(var i=0;i<l-1;i++){
-        if(array[i]+3!==array[i+1]){
-            return "missing number is ", array[i]+3;
-        }
-    }
-}
-console.log(findMissing(sortArray(array)));
+
+
+
+
+});   

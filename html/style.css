@@ -34,7 +34,7 @@ body h1{
     z-index: -1;
 }
 
-a{
+section a{
     text-decoration: none;
     color: red;
 }
@@ -98,3 +98,45 @@ article:active{
     height: 600px; 
     
 }
+
+.profileMenu{
+    list-style: none;
+    float: right;
+    margin-top:10px;
+    margin-right: 20px;
+}
+
+.profileMenuTrigger{
+    padding-bottom: 20px;
+}
+
+.submenu{
+    position: absolute;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid #aaa;
+    background: #fff;
+    margin-top: 16px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    width: 300px;
+    right: 20px;
+    display: none;
+}
+
+.submenu.active{
+    display: block;
+}
+
+.submenu a{
+   text-decoration:none ;
+   padding: 10px 10px;
+   display: block;
+   color: #333;
+   text-shadow: none;
+   font-weight: 600;
+   letter-spacing: 0px; 
+   transition: background 0.3s;
+}
+.submenu a:hover{
+    background: #eee;
+} 
