@@ -1,11 +1,11 @@
 $(document).ready(function(){ //put dollar sign to convert target(document) to a jquery object. whatver is written in ready function will run when the document is ready.
     
+    
     $(document).on('contextmenu',function(){
         return false; //disables the right click context menu
     });
 
     $(document).on('mousedown',function(event){
-        event.preventDefault();
         switch(event.which){
             case 1:
                 console.log("left mouse button");
@@ -71,10 +71,16 @@ $(document).ready(function(){ //put dollar sign to convert target(document) to a
     });
 
 
+    $('.txtarea').focusin(function(){
+        console.log("focusing on text area");
+    });
+    $('.txtarea').focusout(function(){
+        console.log("focusing out text area");
+    });
 
-
-
-
+    $('input[name=search]').on('keyup',function(){
+        $(".status").html('searching..');
+    })
 
 
 

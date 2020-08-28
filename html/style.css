@@ -76,6 +76,11 @@ article:hover{
     outline: none;
 }
 
+.status{
+    display: inline-block;
+    width: 33%;
+    margin:0px 50%;
+}
 
 
 .paragraph{
