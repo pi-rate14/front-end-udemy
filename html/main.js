@@ -1,5 +1,9 @@
 $(document).ready(function(){ //put dollar sign to convert target(document) to a jquery object. whatver is written in ready function will run when the document is ready.
     
+    $(document).on('contextmenu',function(){
+        return false; //disables the right click context menu
+    });
+
     $(document).on('mousedown',function(event){
         event.preventDefault();
         switch(event.which){
@@ -13,6 +17,19 @@ $(document).ready(function(){ //put dollar sign to convert target(document) to a
                 console.log("right mouse button");
                 break;
         }
+        if(event.which == 3){
+            $('.hiddenMenu').removeClass('shown');
+            if($(event.target).is('a')){
+                $('.hiddenMenu').addClass('shown');
+            }
+            $("#context").css({
+                top: event.pageY,
+                left: event.pageX
+            });
+            $('#context').fadeIn(0);
+            return false;
+        }
+        $('#context').fadeOut(0);
     })
     
     

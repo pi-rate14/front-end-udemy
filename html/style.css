@@ -22,18 +22,6 @@ body h1{
     top: 0px;
 }
 
-#main-header::before{
-    content: "";
-    display: block;
-    width: 300px;
-    height: 20px;
-    background: rgb(204, 62, 62);
-    position: absolute;
-    left: 0px;
-    top: 10px;
-    z-index: -1;
-}
-
 section a{
     text-decoration: none;
     color: red;
@@ -88,9 +76,7 @@ article:hover{
     outline: none;
 }
 
-article:active{
-    opacity: 0.5;
-}
+
 
 .paragraph{
     max-width: 99%;
@@ -172,4 +158,40 @@ article:active{
 }
 #append:focus, #prepend:focus, #replace:focus{
     border: none;
+}
+
+#context{
+    margin-top: -20px ;
+    display: inline-block;
+    position: absolute;
+    background: #fff;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    display: none;
+}
+
+.contextMenu{
+    list-style:none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contextMenu a{
+    display: block;
+    width: 200px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight:600 ;
+}
+
+.contextMenu a:hover{
+    background: #eee;
+}
+
+.contextMenu a.hiddenMenu{
+    display: none;
+}
+.contextMenu a.hiddenMenu .shown{
+    display: block;
 }
