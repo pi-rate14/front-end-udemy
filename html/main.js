@@ -81,7 +81,9 @@ $(document).ready(function(){ //put dollar sign to convert target(document) to a
     $('input[name=search]').on('keyup',function(){
         $(".status").html('searching..');
     })
-
+    $('input').css({
+        background: '#ddd'
+    })
 
 
 });   
